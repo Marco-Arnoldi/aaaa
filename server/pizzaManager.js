@@ -139,6 +139,45 @@ var insertPizza = function insertPizza(pizza)
 
 //INSERIRE CODICE QUI SOTTO
 
+/**
+ * @brief This function update all pizzas if their price in < than the param price, en increment 
+ * the price
+ * @param price 
+ * @param increment 
+ * @return the list of the pizzas updated
+ */
+var updatePizzasIfLower = function updatePizzasIfLower(price, increment)
+{
+    var ret = new Array();
+    for(var i=0; i< menu.length;i++){
+        if(menu[i].price<price){
+            menu[i].price = menu[i].price+increment;
+        }
+        ret.push(menu[i]);
+    }
+    return ret;
+}
+
+/**
+ * @brief This function update all pizzas if their price in > than the param price, en increment 
+ * the price
+ * @param price 
+ * @param increment 
+ * @return the list of the pizzas updated
+ */
+var updatePizzasIfNotLower = function updatePizzasIfNotLower(price, increment)
+{
+    var ret = new Array();
+    for(var i=0; i< menu.length;i++){
+        if(menu[i].price>price){
+            menu[i].price = menu[i].price+increment;
+        }
+        ret.push(menu[i]);
+    }
+    return ret;
+}
+
+
 //export functions
 exports.searchPizzaID = searchPizzaID; 
 exports.searchPizzaName = searchPizzaName; 
@@ -146,3 +185,6 @@ exports.deletePizzaID = deletePizzaID;
 exports.deletePizzaName = deletePizzaName; 
 exports.insertPizza = insertPizza; 
 exports.getMenu = getMenu; 
+
+exports.updatePizzasIfLower = updatePizzasIfLower; 
+exports.updatePizzasIfNotLower = updatePizzasIfNotLower; 

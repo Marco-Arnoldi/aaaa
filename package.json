@@ -1,8 +1,14 @@
 {
-  "name": "test",
+  "name": "aaaa",
   "version": "1.0.0",
-  "description": "prova esame",
+  "description": "",
   "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "cors": "^2.8.1",
+    "express": "^4.14.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js"
@@ -11,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/Marco-Arnoldi/aaaa.git"
   },
-  "author": "marco",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Marco-Arnoldi/aaaa/issues"
